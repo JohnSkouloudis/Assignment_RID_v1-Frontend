@@ -34,17 +34,19 @@ onMounted(() => {
       <th>location</th>
 
     </tr>
-    <tr v-for="sensor in sensors" :key="sensor.id">
-      <td>{{ sensor.id }}</td>
-      <td>{{ sensor.sensortype }}</td>
+    <tr v-for="sensor in sensors" :key="sensor.sensorId">
+      <td>{{ sensor.sensorId }}</td>
+      <td>{{ sensor.sensorType }}</td>
       <td>{{ sensor.vendorName }}</td>
       <td>{{ sensor.vendorEmail }}</td>
       <td>{{ sensor.description }}</td>
       <td>{{ sensor.location }}</td>
       <RouterLink to="/SensorMetrics/{{ sensor.id }}">Metrics</RouterLink>
       <RouterLink to="/Readings/{{ sensor.id }}">Readings</RouterLink>
-
     </tr>
+    <button @click="page--" :disabled="page === 0">Previous</button>
+    <span>Page {{ page + 1 }} of {{ totalPages }}</span>
+    <button @click="page++" :disabled="page >= totalPages - 1">Next</button>
   </table>
 </template>
 
