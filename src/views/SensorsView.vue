@@ -24,7 +24,9 @@ onMounted(() => {
 </script>
 
 <template>
+
   <table>
+    <RouterLink to="/sensors/new">Create Sensor</RouterLink>
     <tr>
       <th>Id</th>
       <th>type</th>
@@ -43,6 +45,7 @@ onMounted(() => {
       <td>{{ sensor.location }}</td>
       <RouterLink to="/SensorMetrics/{{ sensor.id }}">Metrics</RouterLink>
       <RouterLink to="/Readings/{{ sensor.id }}">Readings</RouterLink>
+
     </tr>
     <button @click="page--" :disabled="page === 0">Previous</button>
     <span>Page {{ page + 1 }} of {{ totalPages }}</span>

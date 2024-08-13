@@ -4,7 +4,7 @@
 
 <template>
 
-  <h1>Create Sensor</h1>
+  <h3>Create Sensor</h3>
   <form id="sensor-form">
     <label for="sensortype">Sensor Type:</label><br>
     <select  id="sensortype" required>
