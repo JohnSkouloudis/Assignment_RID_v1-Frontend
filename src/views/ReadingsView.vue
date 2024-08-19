@@ -1,7 +1,7 @@
 <script setup>
 import {ref, onMounted,watch} from 'vue'
 import axios from 'axios'
-import {  useRoute } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
 
 const route = useRoute()
 const readings = ref([])
@@ -27,6 +27,7 @@ onMounted(() => {
 
 <template>
   <table>
+    <RouterLink :to="{name:'reading-new', params:{id:sensorId} }"> Create Reading for Sensor with id={{sensorId}}</RouterLink>
     <tr>
       <th>Id</th>
       <th>readingType</th>

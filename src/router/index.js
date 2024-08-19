@@ -16,11 +16,6 @@ const router = createRouter({
 
     },
     {
-      path: '/readings/:id',
-      name: 'readings',
-      component: () => import('../views/ReadingsView.vue')
-    },
-    {
       path:'/sensors/metrics/:id',
       name: 'metrics',
       component: () => import('../views/MetricsView.vue')
@@ -29,6 +24,16 @@ const router = createRouter({
       path: '/sensors/new',
       name: 'sensor-new',
       component: () => import('../views/CreateSensorView.vue')
+    },
+    {
+      path: '/readings/:id',
+      name: 'readings',
+      component: () => import('../views/ReadingsView.vue')
+    },
+    {
+      path: '/readings/new/:id',
+      name: 'reading-new',
+      component: () => import('../views/CreateReadingView.vue')
     }
   ]
 })
