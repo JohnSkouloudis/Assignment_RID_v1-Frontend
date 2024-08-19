@@ -12,7 +12,18 @@ const router = createRouter({
     {
       path: '/sensors',
       name: 'sensors',
-      component: () => import('../views/SensorsView.vue')
+      component: () => import('../views/SensorsView.vue'),
+
+    },
+    {
+      path: '/readings/:id',
+      name: 'readings',
+      component: () => import('../views/ReadingsView.vue')
+    },
+    {
+      path:'/sensors/metrics/:id',
+      name: 'metrics',
+      component: () => import('../views/MetricsView.vue')
     },
     {
       path: '/sensors/new',

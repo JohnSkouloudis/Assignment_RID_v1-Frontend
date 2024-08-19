@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, watch } from 'vue'
 import axios from 'axios'
+import { RouterLink } from 'vue-router'
 
 const page = ref(0)
 const sensors = ref([])
@@ -43,8 +44,8 @@ onMounted(() => {
       <td>{{ sensor.vendorEmail }}</td>
       <td>{{ sensor.description }}</td>
       <td>{{ sensor.location }}</td>
-      <RouterLink to="/SensorMetrics/{{ sensor.id }}">Metrics</RouterLink>
-      <RouterLink to="/Readings/{{ sensor.id }}">Readings</RouterLink>
+      <RouterLink :to="{name:'metrics',params:{id:sensor.sensorId}}">Metrics</RouterLink>
+      <RouterLink :to="{name:'readings', params:{id:sensor.sensorId} }">Readings</RouterLink>
 
     </tr>
     <button @click="page--" :disabled="page === 0">Previous</button>
