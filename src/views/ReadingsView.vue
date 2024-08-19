@@ -1,7 +1,7 @@
 <script setup>
 import {ref, onMounted,watch} from 'vue'
 import axios from 'axios'
-import { RouterLink, useRoute } from 'vue-router'
+import {  useRoute } from 'vue-router'
 
 const route = useRoute()
 const readings = ref([])
