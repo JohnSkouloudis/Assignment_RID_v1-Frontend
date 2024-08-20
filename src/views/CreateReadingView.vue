@@ -1,31 +1,56 @@
 <script setup>
+import axios from 'axios'
+import { useRouter ,useRoute} from 'vue-router'
+import {  ref } from 'vue'
 
+const router = useRouter()
+const route = useRoute()
+const sensorId = route.params.sensorid
+const message = ref('')
+const readingForm = ref({
+  readingType: '',
+  readingValue: '',
+  readingDate: '',
+  description: '',
+  time: ''
+})
+
+async function addReading() {
+
+  const response = await axios.post('http://localhost:9090/api/readings/new/'+ sensorId, readingForm.value)
+  message.value = response.data.message
+  setTimeout(() => {
+    if (response.data.message === 'Sensor Reading Added Successfully') {
+      router.push({ name: 'readings' , params:{id:sensorId}})
+    }
+  }, 2000)
+}
 </script>
 
 <template>
 
-  <form id="reading-form">
+  <form id="reading-form" v-on:submit.prevent="addReading">
 
 
     <label for="readingtype">readingType:</label><br>
-    <input type="text" id="readingtype" name="readingtype" required><br>
+    <input v-model="readingForm.readingType" type="text" id="readingtype" name="readingtype" required><br>
 
     <label for="readingvalue">ReadingValue:</label><br>
-    <input type="number" id="readingvalue" name="readingvalue"><br>
+    <input v-model="readingForm.readingValue" type="number" step="0.01" id="readingvalue" name="readingvalue"><br>
 
     <label for="readingdate">ReadingDate:</label><br>
-    <input type="date" step="0.01" id="readingdate" name="readingdate"><br>
+    <input v-model="readingForm.readingDate" type="date" step="0.01" id="readingdate" name="readingdate"><br>
 
     <label for="description">Description:</label><br>
-    <input type="text" id="description" name="description" required><br>
+    <textarea v-model="readingForm.description" type="text" id="description"  name="description" rows="10" columns="500" placeholder="enter a description for a reading" required> </textarea><br>
 
     <label for="time">time:</label><br>
-    <input type="time" id="time" name="time" required><br>
+    <input v-model="readingForm.time" type="time" id="time" name="time" required><br>
 
-    <button type="submit" id="addReading">addReading</button>
+    <button type="submit" id="addReading">add Reading</button>
 
   </form>
-
+  <div v-if="message">{{ message }}</div>
 </template>
 
 <style scoped>

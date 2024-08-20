@@ -27,7 +27,7 @@ onMounted(() => {
 
 <template>
   <table>
-    <RouterLink :to="{name:'reading-new', params:{id:sensorId} }"> Create Reading for Sensor with id={{sensorId}}</RouterLink>
+    <RouterLink :to="{name:'reading-new', params:{ sensorid:sensorId } }"> Create Reading for Sensor with id={{sensorId}}</RouterLink>
     <tr>
       <th>Id</th>
       <th>readingType</th>
