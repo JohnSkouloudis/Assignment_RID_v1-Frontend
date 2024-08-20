@@ -3,11 +3,11 @@ import AppHeader from '@/components/AppHeader.vue'
 </script>
 
 <template>
-  <div class="flex-container">
-  <h1 >Assignment_RID_v1_Frontend</h1>
-    <AppHeader />
-  </div>
+<nav>
+  <h2 class="position-absolute top-0 start-0">Assignment_RID_v1_Frontend</h2>
+  <AppHeader />
 
+  </nav>
   <RouterView />
 </template>
 
