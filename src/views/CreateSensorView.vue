@@ -33,9 +33,9 @@ async function addSensor(){
 <template>
 
   <h3>Create Sensor</h3>
-  <form id="sensor-form" v-on:submit.prevent="addSensor">
+  <form class="mb-3" id="sensor-form" v-on:submit.prevent="addSensor">
     <label for="sensortype">Sensor Type:</label><br>
-    <select v-model="sensorForm.sensorType" id="sensortype" name="sensortype">
+    <select class="form-control" v-model="sensorForm.sensorType" id="sensortype" name="sensortype">
       <option value="Temperature">Temperature</option>
       <option value="Humidity">Humidity</option>
       <option value="Acoustic">Acoustic</option>
@@ -43,16 +43,16 @@ async function addSensor(){
     </select><br>
 
     <label for="vendorName">Vendor Name:</label><br>
-    <input v-model="sensorForm.vendorName" type="text" id="vendorName" name="vendorname" required><br>
+    <input class="form-control" v-model="sensorForm.vendorName" type="text" id="vendorName" name="vendorname" required><br>
 
     <label for="vendorEmail">Vendor Email:</label><br>
-    <input v-model="sensorForm.vendorEmail" type="text" id="vendorEmail" name="vendoremail" required><br>
+    <input class="form-control" v-model="sensorForm.vendorEmail" type="text" id="vendorEmail" name="vendoremail" required><br>
 
     <label for="description">Description:</label><br>
-    <textarea v-model="sensorForm.description" id="description" name="description" rows="10" columns="500" placeholder="enter a description" required></textarea><br>
+    <textarea class="form-control" v-model="sensorForm.description" id="description" name="description" rows="10" columns="500" placeholder="enter a description" required></textarea><br>
 
     <label for="location">Location:</label><br>
-    <input v-model="sensorForm.location" type="text" id="location" name="location" required><br>
+    <input class="form-control" v-model="sensorForm.location" type="text" id="location" name="location" required><br>
 
     <button type="submit"  id="addSensor">addSensor</button>
   </form>

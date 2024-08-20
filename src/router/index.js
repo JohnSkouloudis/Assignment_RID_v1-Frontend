@@ -34,6 +34,11 @@ const router = createRouter({
       path: '/readings/new/:sensorid',
       name: 'reading-new',
       component: () => import('../views/CreateReadingView.vue')
+    },
+    {
+      path:'/search',
+      name: 'search',
+      component: () => import('../views/SearchView.vue')
     }
   ]
 })
