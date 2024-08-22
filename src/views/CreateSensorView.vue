@@ -16,7 +16,7 @@ const sensorForm= ref({
 
 async function addSensor(){
 
-  const response = await axios.post('http://localhost:9090/api/sensors/new', sensorForm.value)
+  const response = await axios.post(import.meta.env.VITE_BACKEND_URL+'/api/sensors/new', sensorForm.value)
   message.value=response.data.message
   setTimeout(() => {
     if(response.data.message === 'Sensor added successfully'){

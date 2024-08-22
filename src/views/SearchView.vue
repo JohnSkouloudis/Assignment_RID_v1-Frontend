@@ -18,7 +18,7 @@ watch(page, () => {
 })
 
 async function search(){
-  const response = await axios.get('http://localhost:9090/api/readings/search',
+  const response = await axios.get(import.meta.env.VITE_BACKEND_URL+'/api/readings/search',
     {
       params: { page: page.value,sensorType: sensorType.value, location: location.value, time: time.value }
     })

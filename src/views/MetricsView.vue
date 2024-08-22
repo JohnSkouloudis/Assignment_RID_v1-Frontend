@@ -9,7 +9,7 @@ const metrics = ref(null)
 const sensorId = route.params.id
 
 async function getMetrics(){
-  const response = await axios.get('http://localhost:9090/api/sensors/metrics/'+ sensorId)
+  const response = await axios.get(import.meta.env.VITE_BACKEND_URL+'/api/sensors/metrics/'+ sensorId)
   metrics.value = response.data
 }
 

@@ -14,7 +14,7 @@ watch(page, () => {
 })
 
 async function getReadings(){
-  const response = await axios.get('http://localhost:9090/api/readings/'+ sensorId+'?page='+page.value)
+  const response = await axios.get(import.meta.env.VITE_BACKEND_URL+'/api/readings/'+ sensorId+'?page='+page.value)
   readings.value = response.data.content
   totalPages.value = response.data.totalPages
 }

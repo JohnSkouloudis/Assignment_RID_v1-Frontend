@@ -17,7 +17,7 @@ const readingForm = ref({
 
 async function addReading() {
 
-  const response = await axios.post('http://localhost:9090/api/readings/new/'+ sensorId, readingForm.value)
+  const response = await axios.post(import.meta.env.VITE_BACKEND_URL+'/api/readings/new/'+ sensorId, readingForm.value)
   message.value = response.data.message
   setTimeout(() => {
     if (response.data.message === 'Sensor Reading Added Successfully') {
