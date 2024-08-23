@@ -26,17 +26,19 @@ onMounted(() => {
 </script>
 
 <template>
-  <table>
-    <RouterLink :to="{name:'reading-new', params:{ sensorid:sensorId } }"> Create Reading for Sensor with id={{sensorId}}</RouterLink>
-    <tr>
+  <RouterLink class="btn btn-outline-primary" :to="{name:'reading-new', params:{ sensorid:sensorId } }"> Create Reading for Sensor with id={{sensorId}}</RouterLink>
+  <table class="table table-striped" >
+    <thead>
+     <tr>
       <th>Id</th>
       <th>readingType</th>
       <th>readingValue</th>
       <th>readingDate</th>
       <th>description</th>
       <th>time</th>
-
-    </tr>
+     </tr>
+     </thead>
+    <tbody>
     <tr v-for="reading in readings" :key="reading.id">
       <td>{{ reading.id }}</td>
       <td>{{ reading.readingType }}</td>
@@ -44,14 +46,38 @@ onMounted(() => {
       <td>{{ reading.readingDate }}</td>
       <td>{{ reading.description }}</td>
       <td>{{ reading.time }}</td>
-
     </tr>
-    <button @click="page--" :disabled="page === 0">Previous</button>
-    <span>Page {{ page + 1 }} of {{ totalPages }}</span>
-    <button @click="page++" :disabled="page >= totalPages - 1">Next</button>
+    </tbody>
   </table>
+  <div id="page-create-input" class="d-flex justify-content-center" >
+    <ul class="pagination">
+      <li class="page-item">
+        <button class="page-link"  @click="page--" :disabled="page === 0">Previous</button>
+      </li>
+      <li class="page-item">
+        <span  class="page-link" style="width: 130px">Page {{ page + 1 }} of {{ totalPages }}</span>
+      </li>
+      <li class="page-item">
+        <button class="page-link"  @click="page++" :disabled="page >= totalPages - 1">Next</button>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <style scoped>
+
+.page-link:disabled{
+  background-color: rgb(140, 141, 145);
+  border-color: rgba(12, 3, 3, 0.99);
+  color: rgba(12, 3, 3, 0.99);
+}
+
+#page-create-input {
+  margin-top: -1px;
+}
+
+.table {
+  margin-bottom: 0;
+}
 
 </style>

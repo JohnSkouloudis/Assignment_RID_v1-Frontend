@@ -54,7 +54,7 @@ async function addSensor(){
     <label for="location">Location:</label><br>
     <input class="form-control" v-model="sensorForm.location" type="text" id="location" name="location" required><br>
 
-    <button type="submit"  id="addSensor">addSensor</button>
+    <button class="btn btn-outline-success" type="submit"  id="addSensor">addSensor</button>
   </form>
   <div v-if="message">{{ message }}</div>
 

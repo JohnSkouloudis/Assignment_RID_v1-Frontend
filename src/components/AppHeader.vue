@@ -8,20 +8,22 @@ import { RouterLink } from 'vue-router'
 
  <header>
 
-
-        <RouterLink to="/">Home</RouterLink>
-
-
-        <RouterLink to="/sensors">Sensors</RouterLink>
+      <div class="btn-group">
+        <RouterLink class="btn btn-danger" style="color:black" to="/"><b>Home</b></RouterLink>
 
 
-        <RouterLink to="/search">Search</RouterLink>
+        <RouterLink class="btn btn-danger" style="color: black" to="/sensors"><b>Sensors</b></RouterLink>
 
+
+        <RouterLink class="btn btn-danger" style="color: black" to="/search"><b>Search</b></RouterLink>
+      </div>
 
  </header>
 
 </template>
 
 <style scoped>
+
+
 
 </style>

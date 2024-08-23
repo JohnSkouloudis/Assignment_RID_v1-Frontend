@@ -45,12 +45,12 @@ onMounted(() => {
       <td>{{ sensor.vendorEmail }}</td>
       <td>{{ sensor.description }}</td>
       <td>{{ sensor.location }}</td>
-      <RouterLink :to="{name:'metrics',params:{id:sensor.sensorId}}">Metrics</RouterLink>
-      <RouterLink :to="{name:'readings', params:{id:sensor.sensorId} }">Readings</RouterLink>
+      <td><RouterLink class="btn btn-dark" :to="{name:'metrics',params:{id:sensor.sensorId}}">Metrics</RouterLink></td>
+      <td><RouterLink class="btn btn-secondary" :to="{name:'readings', params:{id:sensor.sensorId} }">Readings</RouterLink></td>
     </tr>
     </tbody>
   </table>
-  <div id="page-create-input">
+  <div id="page-create-input" class="d-flex justify-content-center">
   <ul class="pagination">
     <li class="page-item">
       <button class="page-link"  @click="page--" :disabled="page === 0">Previous</button>
@@ -62,7 +62,7 @@ onMounted(() => {
       <button class="page-link"  @click="page++" :disabled="page >= totalPages - 1">Next</button>
     </li>
     <li class="page-item">
-      <RouterLink class="page-link" to="/sensors/new">Create Sensor</RouterLink>
+      <RouterLink class="btn btn-outline-primary" to="/sensors/new">Create Sensor</RouterLink>
     </li>
   </ul>
   </div>
@@ -74,6 +74,14 @@ onMounted(() => {
   background-color: rgb(140, 141, 145);
   border-color: rgba(12, 3, 3, 0.99);
   color: rgba(12, 3, 3, 0.99);
+}
+
+#page-create-input {
+  margin-top: -1px;
+}
+
+.table {
+  margin-bottom: 0;
 }
 
 
