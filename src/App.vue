@@ -13,17 +13,6 @@ import AppHeader from '@/components/AppHeader.vue'
 
 <style scoped>
 
-.flex-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  flex-direction: row;
-  align-items: stretch;
-  gap: 20px;
-  padding: 10px;
-}
-
-
 
 
 </style>
