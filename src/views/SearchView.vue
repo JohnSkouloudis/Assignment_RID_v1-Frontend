@@ -44,12 +44,12 @@ onMounted(() => {
     <table class="table table-striped" >
     <thead>
     <tr>
-      <th>Id</th>
-      <th>readingType</th>
-      <th>readingValue</th>
-      <th>readingDate</th>
-      <th>description</th>
-      <th>time</th>
+      <th><b>Id</b></th>
+      <th><b>readingType</b></th>
+      <th><b>readingValue</b></th>
+      <th><b>readingDate</b></th>
+      <th><b>description</b></th>
+      <th><b>time</b></th>
     </tr>
     </thead>
     <tbody>

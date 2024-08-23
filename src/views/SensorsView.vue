@@ -29,12 +29,12 @@ onMounted(() => {
   <table class="table table-striped">
     <thead>
     <tr>
-      <th scope="col">Id</th>
-      <th scope="col">type</th>
-      <th scope="col">vendorName</th>
-      <th scope="col">vendorEmail</th>
-      <th scope="col">description</th>
-      <th scope="col">location</th>
+      <th scope="col"><b>Id</b></th>
+      <th scope="col"><b>type</b></th>
+      <th scope="col"><b>vendorName</b></th>
+      <th scope="col"><b>vendorEmai</b>l</th>
+      <th scope="col"><b>description</b></th>
+      <th scope="col"><b>location</b></th>
     </tr>
     </thead>
     <tbody>

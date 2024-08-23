@@ -8,14 +8,14 @@ import { RouterLink } from 'vue-router'
 
  <header>
 
-      <div class="btn-group">
-        <RouterLink class="btn btn-danger" style="color:black" to="/"><b>Home</b></RouterLink>
+      <div class="nav-item btn-group">
+        <RouterLink class="btn btn-danger btn-lg" style="color:black" to="/"><b>Home</b></RouterLink>
 
 
-        <RouterLink class="btn btn-danger" style="color: black" to="/sensors"><b>Sensors</b></RouterLink>
+        <RouterLink class="btn btn-danger btn-lg" style="color: black" to="/sensors"><b>Sensors</b></RouterLink>
 
 
-        <RouterLink class="btn btn-danger" style="color: black" to="/search"><b>Search</b></RouterLink>
+        <RouterLink class="btn btn-danger btn-lg" style="color: black" to="/search"><b>Search</b></RouterLink>
       </div>
 
  </header>
@@ -24,6 +24,9 @@ import { RouterLink } from 'vue-router'
 
 <style scoped>
 
-
+.nav-item  {
+  font-size: 2.5vh;
+  padding: 0.5vh 1vh;
+}
 
 </style>
