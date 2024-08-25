@@ -1,6 +1,34 @@
-# assignment_rid_v1_frontend
+# Assignment_RID_v1_Frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+This Project is meant to work as a UI for the [Backend](https://github.com/JohnSkouloudis/Assignment_RID_v1)
+
+## Requirements
+* Node.js
+* [Backend](https://github.com/JohnSkouloudis/Assignment_RID_v1)
+
+
+## Installation & Run
+* Clone the repository
+```
+git clone https://github.com/JohnSkouloudis/Assignment_RID_v1_Frontend.git
+```
+```
+cd Assignment_RID_v1_Frontend
+```
+* Create a .env file 
+
+```
+  VITE_BACKEND_URL=YOUR_URL
+```
+* Install dependencies
+  ```
+  npm install
+  ```
+
+* Start 
+```
+npm run dev
+```
 
 ## Docker
 
