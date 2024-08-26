@@ -34,6 +34,7 @@ nav {
   border-inline: black;
   background-color: #a60505 !important;
   border-radius: 0 0 15px 15px;
+  border-bottom-width: 5px;
   display: flex;
 }
 

@@ -33,9 +33,9 @@ async function addSensor(){
 <template>
 
   <h3>Create Sensor</h3>
-  <form class="mb-3" id="sensor-form" v-on:submit.prevent="addSensor">
+  <form class="p-4 border rounded shadow-sm" id="sensor-form" v-on:submit.prevent="addSensor">
     <label for="sensortype">Sensor Type:</label><br>
-    <select class="form-select" v-model="sensorForm.sensorType" id="sensortype" name="sensortype">
+    <select class="form-select border-danger" v-model="sensorForm.sensorType" id="sensortype" name="sensortype">
       <option value="Temperature">Temperature</option>
       <option value="Humidity">Humidity</option>
       <option value="Acoustic">Acoustic</option>
@@ -43,16 +43,16 @@ async function addSensor(){
     </select><br>
 
     <label for="vendorName">Vendor Name:</label><br>
-    <input class="form-control" v-model="sensorForm.vendorName" type="text" id="vendorName" name="vendorname" required><br>
+    <input class="form-control border-danger" v-model="sensorForm.vendorName" type="text" id="vendorName" name="vendorname" required><br>
 
     <label for="vendorEmail">Vendor Email:</label><br>
-    <input class="form-control" v-model="sensorForm.vendorEmail" type="text" id="vendorEmail" name="vendoremail" required><br>
+    <input class="form-control border-danger" v-model="sensorForm.vendorEmail" type="text" id="vendorEmail" name="vendoremail" required><br>
 
-    <label for="description">Description:</label><br>
-    <textarea class="form-control" v-model="sensorForm.description" id="description" name="description" rows="10" columns="500" placeholder="enter a description" required></textarea><br>
+    <label for="description" >Description:</label><br>
+    <textarea class="form-control border-danger" v-model="sensorForm.description" id="description" name="description" rows="10" columns="500" placeholder="enter a description" required></textarea><br>
 
     <label for="location">Location:</label><br>
-    <input class="form-control" v-model="sensorForm.location" type="text" id="location" name="location" required><br>
+    <input class="form-control border-danger" v-model="sensorForm.location" type="text" id="location" name="location" required><br>
 
     <button class="btn btn-outline-success" type="submit"  id="addSensor">addSensor</button>
   </form>
@@ -61,5 +61,9 @@ async function addSensor(){
 </template>
 
 <style scoped>
+
+.form-control, .form-select {
+  border-width: 2px;
+}
 
 </style>
