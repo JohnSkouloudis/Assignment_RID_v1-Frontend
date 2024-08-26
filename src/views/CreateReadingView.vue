@@ -30,7 +30,7 @@ async function addReading() {
 <template >
 
   <h3>Create Reading</h3>
-  <form class="p-4 border rounded shadow-sm "  id="reading-form" v-on:submit.prevent="addReading">
+  <form class="p-4 border rounded shadow-sm border-dark-subtle"  id="reading-form" v-on:submit.prevent="addReading">
 
 
     <label for="readingtype">readingType:</label><br>

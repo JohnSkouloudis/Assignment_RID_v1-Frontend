@@ -33,7 +33,7 @@ async function addSensor(){
 <template>
 
   <h3>Create Sensor</h3>
-  <form class="p-4 border rounded shadow-sm" id="sensor-form" v-on:submit.prevent="addSensor">
+  <form class="p-4 border rounded shadow-sm border-dark-subtle" id="sensor-form" v-on:submit.prevent="addSensor">
     <label for="sensortype">Sensor Type:</label><br>
     <select class="form-select border-danger" v-model="sensorForm.sensorType" id="sensortype" name="sensortype">
       <option value="Temperature">Temperature</option>
