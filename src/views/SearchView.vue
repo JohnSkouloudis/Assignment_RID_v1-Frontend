@@ -78,7 +78,7 @@ onMounted(() => {
     </div>
   </div>
 
-  <form v-on:submit.prevent="search" class=" mb-3 custom-gap"  >
+  <form class="p-4 border rounded shadow-sm mb-3 custom-gap" v-on:submit.prevent="search"   >
 
     <label for="sensortype">Sensor Type:</label><br>
     <select class="form-select" v-model="sensorType" id="sensortype" name="sensortype">
@@ -116,5 +116,7 @@ onMounted(() => {
 .custom-gap {
   margin-left: 9rem;
 }
+
+
 
 </style>
