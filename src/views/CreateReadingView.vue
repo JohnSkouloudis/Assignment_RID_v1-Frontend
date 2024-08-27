@@ -28,10 +28,9 @@ async function addReading() {
 </script>
 
 <template >
-
-  <h3>Create Reading</h3>
-  <form class="p-4 border rounded shadow-sm border-dark-subtle"  id="reading-form" v-on:submit.prevent="addReading">
-
+  <div class="form-container">
+  <form class="p-4 border rounded shadow-sm border-dark-subtle" style="width: 400px" id="reading-form" v-on:submit.prevent="addReading">
+    <h3>Create Reading</h3>
 
     <label for="readingtype">readingType:</label><br>
     <input class="form-control border-danger-subtle" v-model="readingForm.readingType" type="text" id="readingtype" name="readingtype" required><br>
@@ -52,12 +51,21 @@ async function addReading() {
 
   </form>
   <div v-if="message">{{ message }}</div>
+  </div>
 </template>
 
 <style scoped>
 
 .form-control {
 border-width: 2px;
+}
+
+.form-container{
+  margin-bottom: 30px;
+  border-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 </style>

@@ -31,9 +31,9 @@ async function addSensor(){
 </script>
 
 <template>
-
-  <h3>Create Sensor</h3>
-  <form class="p-4 border rounded shadow-sm border-dark-subtle" id="sensor-form" v-on:submit.prevent="addSensor">
+<div class="form-container">
+  <form class="p-4 border rounded shadow-sm border-dark-subtle" style="width: 400px" id="sensor-form" v-on:submit.prevent="addSensor">
+    <h3>Create Sensor</h3>
     <label for="sensortype">Sensor Type:</label><br>
     <select class="form-select border-danger" v-model="sensorForm.sensorType" id="sensortype" name="sensortype">
       <option value="Temperature">Temperature</option>
@@ -57,13 +57,22 @@ async function addSensor(){
     <button class="btn btn-outline-success" type="submit"  id="addSensor">addSensor</button>
   </form>
   <div v-if="message">{{ message }}</div>
-
+</div>
 </template>
 
 <style scoped>
 
+.form-container{
+  margin-bottom: 30px;
+  border-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .form-control, .form-select {
   border-width: 2px;
+
 }
 
 </style>

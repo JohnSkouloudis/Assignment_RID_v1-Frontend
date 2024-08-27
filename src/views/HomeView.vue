@@ -3,7 +3,7 @@
 
 <template>
   <div class="container-fluid d-flex align-items-center justify-content-center min-vh-100">
-    <div class="content text-center">
+    <div class="content text-center" style="width: 50%">
       <div class="title">
         <h2 class='display-4'> Welcome to the Sensor Management System </h2>
         <p class='lead'>This is the user interface for managing and viewing sensors and their data </p>
