@@ -56,9 +56,7 @@ async function addReading() {
 
 <style scoped>
 
-.form-control {
-border-width: 2px;
-}
+
 
 .form-container{
   margin-bottom: 30px;

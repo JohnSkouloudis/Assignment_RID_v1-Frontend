@@ -70,9 +70,6 @@ async function addSensor(){
   align-items: center;
 }
 
-.form-control, .form-select {
-  border-width: 2px;
 
-}
 
 </style>

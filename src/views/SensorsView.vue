@@ -70,15 +70,7 @@ onMounted(() => {
 
 <style scoped>
 
-.page-link:disabled{
-  background-color: rgb(140, 141, 145);
-  border-color: rgba(12, 3, 3, 0.99);
-  color: rgba(12, 3, 3, 0.99);
-}
 
-#page-create-input {
-  margin-top: -1px;
-}
 
 .table {
   margin-bottom: 0;

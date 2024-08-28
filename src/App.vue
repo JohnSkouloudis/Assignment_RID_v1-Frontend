@@ -14,7 +14,7 @@ import AppHeader from '@/components/AppHeader.vue'
     </div>
   </nav>
 
-  <div class="content">
+  <div class="content align-items-center">
   <RouterView/>
   </div>
 </template>

@@ -39,8 +39,8 @@ onMounted(() => {
 </script>
 
 <template>
-<div class="d-flex justify-content-between">
-  <div id="table-page-buttons" >
+<div class="d-flex flex-row  justify-content-center">
+  <div id="table-page-buttons" style='width: 50%'>
     <table class="table table-striped" >
     <thead>
     <tr>
@@ -78,7 +78,7 @@ onMounted(() => {
     </div>
   </div>
 
-  <form class="p-4 border rounded shadow-sm mb-3 custom-gap" v-on:submit.prevent="search"   >
+  <form class="p-4 border rounded shadow-sm mb-3 " v-on:submit.prevent="search"   >
 
     <label for="sensortype">Sensor Type:</label><br>
     <select class="form-select" v-model="sensorType" id="sensortype" name="sensortype">
@@ -99,23 +99,7 @@ onMounted(() => {
 
 <style scoped>
 
-.page-link:disabled{
-  background-color: rgb(140, 141, 145);
-  border-color: rgba(12, 3, 3, 0.99);
-  color: rgba(12, 3, 3, 0.99);
-}
 
-#page-create-input {
-  margin-top: -1px;
-}
-
-.table {
-  margin-bottom: 0;
-}
-
-.custom-gap {
-  margin-left: 9rem;
-}
 
 
 

@@ -19,15 +19,15 @@
         <h4>Types of Sensors</h4>
         <ul>
           <li>
-          <img src="/temperature-control.png" alt="Temperature Icon" style="width: 30px; height: 30px; margin-right: 5px;">
+          <img src='/src/assets/temperature-control.png' alt="Temperature Icon" style="width: 30px; height: 30px; margin-right: 5px;">
           Temperature Sensor
           </li>
           <li>
-          <img src="/humidity.png" alt="Humidity Icon" style="width: 30px; height: 30px; margin-right: 5px;">
+          <img src='/src/assets/humidity.png' alt="Humidity Icon" style="width: 30px; height: 30px; margin-right: 5px;">
           Humidity Sensor
           </li>
           <li>
-          <img src="/sensor-alert.png" alt="Humidity Icon" style="width: 25px; height: 25px; margin-right: 9px;">
+          <img src='/src/assets/sensor-alert.png' alt="Humidity Icon" style="width: 25px; height: 25px; margin-right: 9px;">
           Acoustic Sensor
           </li>
         </ul>
@@ -49,11 +49,11 @@
         <h3><u>Repositories</u></h3>
         <ul >
           <li>
-          <a href='https://github.com/JohnSkouloudis/Assignment_RID_v1' target='_blank'><img src="/github-mark.png" alt='github'  style="width: 35px; height: 35px;"></a>
+          <a href='https://github.com/JohnSkouloudis/Assignment_RID_v1' target='_blank'><img src='/src/assets/github-mark.png' alt='github' style="width: 35px; height: 35px;"></a>
           Backend
           </li>
           <li>
-          <a href='https://github.com/JohnSkouloudis/Assignment_RID_v1_Frontend' target='_blank' ><img src="/github-mark-blue.png" alt='github'  style="width: 35px; height: 35px; "></a>
+          <a href='https://github.com/JohnSkouloudis/Assignment_RID_v1_Frontend' target='_blank' ><img src='/src/assets/github-mark-blue.png' alt='github' style="width: 35px; height: 35px; "></a>
            Frontend
           </li>
         </ul>
