@@ -5,19 +5,36 @@ import { ref, onMounted, watch } from 'vue'
 
 
 const results= ref([])
-const page= ref(0)
+const page = ref(0)
 const totalPages= ref(0)
 
 const sensorType=ref(undefined)
 const location=ref(undefined)
 const time=ref(undefined)
 
+const formSubmitted = ref(0)
 
 watch(page, () => {
   search()
 })
 
+
+watch(formSubmitted,(newValue)=>{
+  page.value=0
+
+  if(newValue === 2){
+    sensorType.value=undefined
+    location.value=undefined
+    time.value=undefined
+
+  }
+  search()
+  formSubmitted.value=0
+})
+
+
 async function search(){
+
   const response = await axios.get(import.meta.env.VITE_BACKEND_URL+'/api/readings/search',
     {
       params: { page: page.value,sensorType: sensorType.value, location: location.value, time: time.value }
@@ -26,9 +43,7 @@ async function search(){
   totalPages.value=response.data.totalPages
   console.log(results.value)
 
-   sensorType.value= undefined
-   location.value= undefined
-   time.value= undefined
+
 
 }
 
@@ -78,7 +93,7 @@ onMounted(() => {
     </div>
   </div>
 
-  <form class="p-4 border rounded shadow-sm mb-3 " v-on:submit.prevent="search"   >
+  <form class="p-4 border rounded shadow-sm mb-3 " v-on:submit.prevent="formSubmitted=1"   >
 
     <label for="sensortype">Sensor Type:</label><br>
     <select class="form-select" v-model="sensorType" id="sensortype" name="sensortype">
@@ -90,17 +105,14 @@ onMounted(() => {
     <input class="form-control" v-model="location" type="text" id="location" name="location" ><br>
     <label for="time">Time:</label><br>
     <input class="form-control" v-model="time" type="time" id="time" name="time" ><br>
-    <button class="btn btn-info" type="submit" id="searchButton">Search</button>
-
+    <button class="btn btn-info"  type="submit" id="searchButton">Search</button>
+    <button class="btn btn-danger" @click="formSubmitted=2" type="reset" id="resetButton">Reset</button>
   </form>
 
 </div>
 </template>
 
 <style scoped>
-
-
-
 
 
 </style>
