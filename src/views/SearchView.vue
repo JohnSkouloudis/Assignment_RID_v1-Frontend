@@ -106,7 +106,7 @@ onMounted(() => {
     <label for="time">Time:</label><br>
     <input class="form-control" v-model="time" type="time" id="time" name="time" ><br>
     <button class="btn btn-info"  type="submit" id="searchButton">Search</button>
-    <button class="btn btn-danger" @click="formSubmitted=2" type="reset" id="resetButton">Reset</button>
+    <button class="btn btn-danger" @click="formSubmitted=2"  id="resetButton">Reset</button>
   </form>
 
 </div>
